@@ -6,9 +6,8 @@ var PORT = process.env.PORT || 3000;
 
 const cheerio = require("cheerio")
 const axios = require("axios")
-var db = require("./models")
 // Require all models
-var db = require("./models");
+var db = require("./models")
 
 // Initialize Express
 var app = express();
@@ -25,9 +24,6 @@ app.use(express.static("public"));
 
 // Connect to the Mongo DB
 // mongoose.connect("mongodb://localhost/populatedb", { useNewUrlParser: true });
-
-
-
 
 
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
