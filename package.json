@@ -1,8 +1,8 @@
 {
   "name": "all-the-news-that-s-fit-to-scrape-wk18",
   "version": "1.0.0",
-  "description": "index.js",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
