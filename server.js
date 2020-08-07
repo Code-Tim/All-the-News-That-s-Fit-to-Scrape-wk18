@@ -8,9 +8,8 @@ const cheerio = require("cheerio")
 const axios = require("axios")
 var db = require("./models")
 // Require all models
-// var db = require("./models/Article");
-const Article = require("./models/Article");
-const Note = require("./models/Note.js");
+var db = require("./models/Article");
+var db = require("./models/Article");
 
 // Initialize Express
 var app = express();
