@@ -4,6 +4,9 @@ var mongoose = require("mongoose");
 
 var PORT = process.env.PORT || 3000;
 
+const cheerio = require("cheerio")
+const axios = require("axios")
+var db = require("./models")
 // Require all models
 var db = require("./models");
 
@@ -34,10 +37,11 @@ mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true, useUnifiedTopology: true
 });
 
+app.listen(PORT, function () {
+    console.log("App running on port " + PORT + "!");
+})
+
 //cheerio
-const cheerio = require("cheerio")
-const axios = require("axios")
-var db = require("./models")
 app.get("/scrape", function (req, res) {
     // First, we grab the body of the html with axios
     axios.get("https://www.bbc.com/sport").then(function (response) {
@@ -124,7 +128,4 @@ app.get("/scrape", function (req, res) {
 
 
 
-})
-app.listen(PORT, function () {
-    console.log("App running on port " + PORT + "!");
 })
